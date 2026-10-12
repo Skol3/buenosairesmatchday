@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buenos Aires Matchday | Argentine Football Experiences</title>
+
+    <meta name="description"
+          content="Discover Argentine football with Buenos Aires Matchday. Ask about match tickets, football tours and local experiences in Buenos Aires.">
+
+    <meta name="theme-color" content="#07111f">
+
+    <meta property="og:title" content="Buenos Aires Matchday">
+    <meta property="og:description"
+          content="Experience Argentine football like a local. Match tickets, football tours and experiences in Buenos Aires.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+
+            <a class="brand" href="#home" aria-label="Buenos Aires Matchday home">
+                <span class="brand-mark">BA<span>M</span></span>
+                <span class="brand-name">
+                    BUENOS AIRES
+                    <strong>MATCHDAY</strong>
+                </span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <a href="#home" data-i18n="navHome">Home</a>
+                <a href="#tickets" data-i18n="navTickets">Match Tickets</a>
+                <a href="#tours" data-i18n="navTours">Football Tours</a>
+                <a href="#about" data-i18n="navAbout">About Us</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+
+                <div class="language-switch" aria-label="Select language">
+                    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                    <span>|</span>
+                    <button type="button" class="lang-btn" data-lang="es">ES</button>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-background"></div>
+            <div class="hero-shade"></div>
+
+            <div class="container hero-content">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    <span data-i18n="heroEyebrow">THE HOME OF ARGENTINE FOOTBALL</span>
+                </div>
+
+                <h1 data-i18n="heroTitle">
+                    FEEL THE<br>
+                    <span>PASSION.</span><br>
+                    LIVE THE GAME.
+                </h1>
+
+                <p class="hero-description" data-i18n="heroText">
+                    Discover Buenos Aires through its football,
+                    legendary stadiums and unforgettable matchday atmosphere.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#tickets" class="btn btn-primary">
+                        <span data-i18n="heroTickets">EXPLORE MATCHES</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="#tours" class="btn btn-outline">
+                        <span data-i18n="heroTours">DISCOVER TOURS</span>
+                    </a>
+                </div>
+
+                <div class="hero-bottom">
+                    <span data-i18n="heroLocation">BUENOS AIRES, ARGENTINA</span>
+                    <span class="hero-bottom-right">
+                        <span class="live-dot"></span>
+                        <span data-i18n="heroExperience">FOOTBALL. CULTURE. PASSION.</span>
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- INTRO -->
+        <section class="intro section-padding">
+            <div class="container intro-grid">
+
+                <div>
+                    <p class="section-label" data-i18n="introLabel">
+                        MORE THAN A MATCH
+                    </p>
+
+                    <h2 data-i18n="introTitle">
+                        FOOTBALL IS<br>
+                        <span>A WAY OF LIFE.</span>
+                    </h2>
+                </div>
+
+                <div class="intro-copy">
+                    <p data-i18n="introText">
+                        In Buenos Aires, football is part of everyday life.
+                        From iconic stadiums to passionate neighbourhoods,
+                        every match tells a story.
+                    </p>
+
+                    <p data-i18n="introText2">
+                        We help you discover the city through the game,
+                        with personal assistance for match tickets and
+                        football-themed experiences.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- MATCH TICKETS -->
+        <section class="offers section-padding" id="tickets">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label" data-i18n="ticketsLabel">
+                            BE PART OF THE ACTION
+                        </p>
+
+                        <h2 data-i18n="ticketsTitle">
+                            MATCH <span>TICKETS</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-heading-copy" data-i18n="ticketsIntro">
+                        Looking to experience Argentine football live?
+                        Tell us which match you want to see.
+                    </p>
+                </div>
+
+                <div class="feature-card ticket-card">
+                    <div class="feature-image ticket-image">
+                        <span class="image-tag" data-i18n="ticketTag">
+                            LIVE FOOTBALL
+                        </span>
+                    </div>
+
+                    <div class="feature-content">
+                        <p class="card-number">01 / MATCHDAY</p>
+
+                        <h3 data-i18n="ticketCardTitle">
+                            YOUR MATCHDAY<br>STARTS HERE.
+                        </h3>
+
+                        <p data-i18n="ticketCardText">
+                            Interested in a Boca Juniors, River Plate or
+                            another Buenos Aires football match? Contact us
+                            with your preferred date and team.
+                        </p>
+
+                        <p class="small-note" data-i18n="ticketNote">
+                            Availability, prices and ticket conditions
+                            must be confirmed individually.
+                        </p>
+
+                        <a href="#contact"
+                           class="text-link"
+                           data-contact="tickets">
+                            <span data-i18n="ticketButton">ASK ABOUT TICKETS</span>
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TOURS -->
+        <section class="offers tours-section section-padding" id="tours">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label" data-i18n="toursLabel">
+                            DISCOVER THE CITY
+                        </p>
+
+                        <h2 data-i18n="toursTitle">
+                            FOOTBALL <span>TOURS</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-heading-copy" data-i18n="toursIntro">
+                        Explore Buenos Aires through its clubs, stadiums,
+                        neighbourhoods and football history.
+                    </p>
+                </div>
+
+                <div class="tour-grid">
+
+                    <article class="tour-card">
+                        <div class="tour-image tour-image-one">
+                            <span class="tour-index">01</span>
+                        </div>
+
+                        <div class="tour-card-content">
+                            <p class="card-number" data-i18n="tourType1">
+                                CITY EXPERIENCE
+                            </p>
+
+                            <h3 data-i18n="tourTitle1">
+                                FOOTBALL BUENOS AIRES
+                            </h3>
+
+                            <p data-i18n="tourText1">
+                                Discover the city's football culture,
+                                iconic neighbourhoods and stories.
+                            </p>
+
+                            <a href="#contact"
+                               class="text-link"
+                               data-contact="tour-city">
+                                <span data-i18n="tourButton">ASK ABOUT THIS TOUR</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <article class="tour-card">
+                        <div class="tour-image tour-image-two">
+                            <span class="tour-index">02</span>
+                        </div>
+
+                        <div class="tour-card-content">
+                            <p class="card-number" data-i18n="tourType2">
+                                STADIUM EXPERIENCE
+                            </p>
+
+                            <h3 data-i18n="tourTitle2">
+                                STADIUMS &amp; CLUBS
+                            </h3>
+
+                            <p data-i18n="tourText2">
+                                Explore the places and traditions that
+                                make Argentine football unique.
+                            </p>
+
+                            <a href="#contact"
+                               class="text-link"
+                               data-contact="tour-stadiums">
+                                <span data-i18n="tourButton">ASK ABOUT THIS TOUR</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+
+                    <article class="tour-card">
+                        <div class="tour-image tour-image-three">
+                            <span class="tour-index">03</span>
+                        </div>
+
+                        <div class="tour-card-content">
+                            <p class="card-number" data-i18n="tourType3">
+                                LOCAL EXPERIENCE
+                            </p>
+
+                            <h3 data-i18n="tourTitle3">
+                                MATCHDAY EXPERIENCE
+                            </h3>
+
+                            <p data-i18n="tourText3">
+                                Discover the atmosphere surrounding a
+                                match and experience the city like a local.
+                            </p>
+
+                            <a href="#contact"
+                               class="text-link"
+                               data-contact="tour-matchday">
+                                <span data-i18n="tourButton">ASK ABOUT THIS TOUR</span>
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="availability-note" data-i18n="tourNote">
+                    Tour itineraries, access restrictions, dates and
+                    prices are confirmed before booking.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- ABOUT EMANUEL -->
+        <section class="about-section section-padding" id="about">
+            <div class="container about-grid">
+
+                <div class="about-visual">
+                    <div class="about-image"></div>
+                    <div class="about-image-caption">
+                        <span data-i18n="aboutCaption">YOUR LOCAL FOOTBALL CONNECTION</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <p class="section-label" data-i18n="aboutLabel">
+                        YOUR HOST IN BUENOS AIRES
+                    </p>
+
+                    <h2 data-i18n="aboutTitle">
+                        MEET YOUR<br>
+                        <span>LOCAL GUIDE.</span>
+                    </h2>
+
+                    <p data-i18n="aboutText">
+                        Emanuel Cedron helps visitors discover Argentine
+                        football through matchday experiences and
+                        football-themed tours in Buenos Aires.
+                    </p>
+
+                    <p data-i18n="aboutText2">
+                        Get in touch directly to discuss your plans,
+                        ask questions and find an experience that fits
+                        your trip.
+                    </p>
+
+                    <a href="#contact" class="btn btn-primary">
+                        <span data-i18n="aboutButton">GET IN TOUCH</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container contact-inner">
+
+                <p class="section-label" data-i18n="contactLabel">
+                    LET'S PLAN YOUR MATCHDAY
+                </p>
+
+                <h2 data-i18n="contactTitle">
+                    YOUR ARGENTINE<br>
+                    <span>FOOTBALL STORY</span><br>
+                    STARTS HERE.
+                </h2>
+
+                <p class="contact-description" data-i18n="contactText">
+                    Tell Emanuel which match you want to see or
+                    what kind of football experience you're looking for.
+                </p>
+
+                <div class="contact-actions">
+
+                    <a href="#"
+                       class="btn btn-primary"
+                       id="whatsappLink"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="contact-icon">↗</span>
+                        <span data-i18n="contactWhatsApp">CONTACT ON WHATSAPP</span>
+                    </a>
+
+                    <a href="#"
+                       class="btn btn-outline"
+                       id="emailLink">
+                        <span class="contact-icon">✉</span>
+                        <span data-i18n="contactEmail">SEND AN EMAIL</span>
+                    </a>
+
+                </div>
+
+                <p class="contact-small" data-i18n="contactNote">
+                    Ask about availability, prices and booking conditions directly.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-top">
+
+            <a class="brand footer-brand" href="#home">
+                <span class="brand-mark">BA<span>M</span></span>
+                <span class="brand-name">
+                    BUENOS AIRES
+                    <strong>MATCHDAY</strong>
+                </span>
+            </a>
+
+            <p data-i18n="footerText">
+                Argentine football. Local experiences. Unforgettable memories.
+            </p>
+
+            <div class="footer-links">
+                <a href="#tickets" data-i18n="navTickets">Match Tickets</a>
+                <a href="#tours" data-i18n="navTours">Football Tours</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <span>
+                © <span id="currentYear"></span> Buenos Aires Matchday
+            </span>
+
+            <span data-i18n="footerLocation">
+                BUENOS AIRES, ARGENTINA
+            </span>
+        </div>
+    </footer>
+
+
+    <!-- MOBILE WHATSAPP BUTTON -->
+    <a href="#"
+       id="floatingWhatsApp"
+       class="floating-whatsapp"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <span aria-hidden="true">↗</span>
+        <span data-i18n="floatingWhatsApp">ASK US</span>
+    </a>
+
+</body>
+</html>
