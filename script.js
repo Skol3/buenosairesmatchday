@@ -1,398 +1,156 @@
-"use strict";
-
-/*
- * BUENOS AIRES MATCHDAY
- *
- * IMPORTANT:
- * Replace the placeholder WhatsApp number and email below
- * with Emanuel's real contact details before publishing.
- *
- * WhatsApp number format:
- * country code + number, digits only, without +, spaces or dashes.
- */
-
+// Buenos Aires Matchday — language, mobile navigation and contact links.
+// Replace these two values before publishing. Use country code + number, digits only.
 const CONFIG = {
-    whatsappNumber: "549XXXXXXXXXX",
-    email: "YOUR_EMAIL@example.com"
+  whatsappNumber: "549XXXXXXXXXX",
+  email: "YOUR_EMAIL@example.com"
 };
-
 
 const translations = {
-    en: {
-        pageTitle: "Buenos Aires Matchday | Argentine Football Experiences",
-
-        navHome: "Home",
-        navTickets: "Match Tickets",
-        navTours: "Football Tours",
-        navAbout: "About Us",
-        navContact: "Contact",
-
-        heroEyebrow: "THE HOME OF ARGENTINE FOOTBALL",
-        heroTitle: "FEEL THE<br><span>PASSION.</span><br>LIVE THE GAME.",
-        heroText: "Discover Buenos Aires through its football, legendary stadiums and unforgettable matchday atmosphere.",
-        heroTickets: "EXPLORE MATCHES",
-        heroTours: "DISCOVER TOURS",
-        heroLocation: "BUENOS AIRES, ARGENTINA",
-        heroExperience: "FOOTBALL. CULTURE. PASSION.",
-
-        introLabel: "MORE THAN A MATCH",
-        introTitle: "FOOTBALL IS<br><span>A WAY OF LIFE.</span>",
-        introText: "In Buenos Aires, football is part of everyday life. From iconic stadiums to passionate neighbourhoods, every match tells a story.",
-        introText2: "We help you discover the city through the game, with personal assistance for match tickets and football-themed experiences.",
-
-        ticketsLabel: "BE PART OF THE ACTION",
-        ticketsTitle: "MATCH <span>TICKETS</span>",
-        ticketsIntro: "Looking to experience Argentine football live? Tell us which match you want to see.",
-        ticketTag: "LIVE FOOTBALL",
-        ticketCardTitle: "YOUR MATCHDAY<br>STARTS HERE.",
-        ticketCardText: "Interested in a Boca Juniors, River Plate or another Buenos Aires football match? Contact us with your preferred date and team.",
-        ticketNote: "Availability, prices and ticket conditions must be confirmed individually.",
-        ticketButton: "ASK ABOUT TICKETS",
-
-        toursLabel: "DISCOVER THE CITY",
-        toursTitle: "FOOTBALL <span>TOURS</span>",
-        toursIntro: "Explore Buenos Aires through its clubs, stadiums, neighbourhoods and football history.",
-
-        tourType1: "CITY EXPERIENCE",
-        tourTitle1: "FOOTBALL BUENOS AIRES",
-        tourText1: "Discover the city's football culture, iconic neighbourhoods and stories.",
-
-        tourType2: "STADIUM EXPERIENCE",
-        tourTitle2: "STADIUMS &amp; CLUBS",
-        tourText2: "Explore the places and traditions that make Argentine football unique.",
-
-        tourType3: "LOCAL EXPERIENCE",
-        tourTitle3: "MATCHDAY EXPERIENCE",
-        tourText3: "Discover the atmosphere surrounding a match and experience the city like a local.",
-
-        tourButton: "ASK ABOUT THIS TOUR",
-        tourNote: "Tour itineraries, access restrictions, dates and prices are confirmed before booking.",
-
-        aboutCaption: "YOUR LOCAL FOOTBALL CONNECTION",
-        aboutLabel: "YOUR HOST IN BUENOS AIRES",
-        aboutTitle: "MEET YOUR<br><span>LOCAL GUIDE.</span>",
-        aboutText: "Emanuel Cedron helps visitors discover Argentine football through matchday experiences and football-themed tours in Buenos Aires.",
-        aboutText2: "Get in touch directly to discuss your plans, ask questions and find an experience that fits your trip.",
-        aboutButton: "GET IN TOUCH",
-
-        contactLabel: "LET'S PLAN YOUR MATCHDAY",
-        contactTitle: "YOUR ARGENTINE<br><span>FOOTBALL STORY</span><br>STARTS HERE.",
-        contactText: "Tell Emanuel which match you want to see or what kind of football experience you're looking for.",
-        contactWhatsApp: "CONTACT ON WHATSAPP",
-        contactEmail: "SEND AN EMAIL",
-        contactNote: "Ask about availability, prices and booking conditions directly.",
-
-        footerText: "Argentine football. Local experiences. Unforgettable memories.",
-        footerLocation: "BUENOS AIRES, ARGENTINA",
-        floatingWhatsApp: "ASK US",
-
-        whatsappGreeting: "Hello Emanuel! I'm interested in Buenos Aires Matchday.",
-        whatsappTickets: "Hello Emanuel! I'd like to ask about football match tickets in Buenos Aires.",
-        whatsappCityTour: "Hello Emanuel! I'm interested in a football tour around Buenos Aires.",
-        whatsappStadiumTour: "Hello Emanuel! I'd like to ask about stadium and club tours in Buenos Aires.",
-        whatsappMatchdayTour: "Hello Emanuel! I'm interested in a matchday experience in Buenos Aires.",
-
-        emailSubject: "Buenos Aires Matchday enquiry",
-        emailBody: "Hello Emanuel,\n\nI'm interested in your football experiences in Buenos Aires.\n\nCould you please provide more information about availability, prices and booking conditions?\n\nThank you!"
-    },
-
-    es: {
-        pageTitle: "Buenos Aires Matchday | Experiencias de fútbol argentino",
-
-        navHome: "Inicio",
-        navTickets: "Entradas",
-        navTours: "Tours de fútbol",
-        navAbout: "Nosotros",
-        navContact: "Contacto",
-
-        heroEyebrow: "EL HOGAR DEL FÚTBOL ARGENTINO",
-        heroTitle: "SENTÍ LA<br><span>PASIÓN.</span><br>VIVÍ EL FÚTBOL.",
-        heroText: "Descubrí Buenos Aires a través de su fútbol, sus estadios legendarios y la atmósfera inolvidable de cada partido.",
-        heroTickets: "VER PARTIDOS",
-        heroTours: "DESCUBRIR TOURS",
-        heroLocation: "BUENOS AIRES, ARGENTINA",
-        heroExperience: "FÚTBOL. CULTURA. PASIÓN.",
-
-        introLabel: "MUCHO MÁS QUE UN PARTIDO",
-        introTitle: "EL FÚTBOL ES<br><span>UNA FORMA DE VIDA.</span>",
-        introText: "En Buenos Aires, el fútbol forma parte de la vida cotidiana. Desde estadios emblemáticos hasta barrios apasionados, cada partido tiene una historia.",
-        introText2: "Te ayudamos a descubrir la ciudad a través del fútbol, con asistencia personalizada para entradas y experiencias futboleras.",
-
-        ticketsLabel: "VIVÍ LA EXPERIENCIA",
-        ticketsTitle: "ENTRADAS <span>DE FÚTBOL</span>",
-        ticketsIntro: "¿Querés vivir el fútbol argentino en directo? Contanos qué partido te gustaría ver.",
-        ticketTag: "FÚTBOL EN VIVO",
-        ticketCardTitle: "TU DÍA DE FÚTBOL<br>EMPIEZA ACÁ.",
-        ticketCardText: "¿Te interesa un partido de Boca Juniors, River Plate u otro equipo de Buenos Aires? Contactanos con la fecha y el equipo que preferís.",
-        ticketNote: "La disponibilidad, los precios y las condiciones de las entradas deben confirmarse individualmente.",
-        ticketButton: "CONSULTAR ENTRADAS",
-
-        toursLabel: "DESCUBRÍ LA CIUDAD",
-        toursTitle: "TOURS DE <span>FÚTBOL</span>",
-        toursIntro: "Descubrí Buenos Aires a través de sus clubes, estadios, barrios e historia futbolera.",
-
-        tourType1: "EXPERIENCIA POR LA CIUDAD",
-        tourTitle1: "BUENOS AIRES FUTBOLERA",
-        tourText1: "Descubrí la cultura futbolera de la ciudad, sus barrios emblemáticos y sus historias.",
-
-        tourType2: "EXPERIENCIA EN ESTADIOS",
-        tourTitle2: "ESTADIOS Y CLUBES",
-        tourText2: "Conocé los lugares y las tradiciones que hacen único al fútbol argentino.",
-
-        tourType3: "EXPERIENCIA LOCAL",
-        tourTitle3: "EXPERIENCIA DE PARTIDO",
-        tourText3: "Descubrí el ambiente que rodea un partido y viví la ciudad como un local.",
-
-        tourButton: "CONSULTAR ESTE TOUR",
-        tourNote: "Los itinerarios, las restricciones de acceso, las fechas y los precios se confirman antes de reservar.",
-
-        aboutCaption: "TU CONTACTO LOCAL CON EL FÚTBOL",
-        aboutLabel: "TU ANFITRIÓN EN BUENOS AIRES",
-        aboutTitle: "CONOCÉ A TU<br><span>GUÍA LOCAL.</span>",
-        aboutText: "Emanuel Cedron ayuda a los visitantes a descubrir el fútbol argentino mediante experiencias de día de partido y tours temáticos en Buenos Aires.",
-        aboutText2: "Contactalo directamente para conversar sobre tus planes, resolver dudas y encontrar una experiencia adecuada para tu viaje.",
-        aboutButton: "CONTACTAR",
-
-        contactLabel: "PLANIFIQUEMOS TU DÍA DE FÚTBOL",
-        contactTitle: "TU HISTORIA CON EL<br><span>FÚTBOL ARGENTINO</span><br>EMPIEZA ACÁ.",
-        contactText: "Contale a Emanuel qué partido te gustaría ver o qué tipo de experiencia futbolera estás buscando.",
-        contactWhatsApp: "CONTACTAR POR WHATSAPP",
-        contactEmail: "ENVIAR UN EMAIL",
-        contactNote: "Consultá directamente la disponibilidad, los precios y las condiciones de reserva.",
-
-        footerText: "Fútbol argentino. Experiencias locales. Recuerdos inolvidables.",
-        footerLocation: "BUENOS AIRES, ARGENTINA",
-        floatingWhatsApp: "CONSULTANOS",
-
-        whatsappGreeting: "¡Hola, Emanuel! Me interesan las experiencias de Buenos Aires Matchday.",
-        whatsappTickets: "¡Hola, Emanuel! Quisiera consultar por entradas para partidos de fútbol en Buenos Aires.",
-        whatsappCityTour: "¡Hola, Emanuel! Me interesa un tour de fútbol por Buenos Aires.",
-        whatsappStadiumTour: "¡Hola, Emanuel! Quisiera consultar por tours de estadios y clubes en Buenos Aires.",
-        whatsappMatchdayTour: "¡Hola, Emanuel! Me interesa una experiencia de día de partido en Buenos Aires.",
-
-        emailSubject: "Consulta sobre Buenos Aires Matchday",
-        emailBody: "Hola, Emanuel:\n\nMe interesan tus experiencias de fútbol en Buenos Aires.\n\n¿Podrías enviarme más información sobre disponibilidad, precios y condiciones de reserva?\n\n¡Muchas gracias!"
-    }
+  en: {
+    navHome:"Home", navDestinations:"Destinations", navMatches:"Matches", navAbout:"About", navContact:"Contact",
+    eyebrow:"FOOTBALL. CULTURE. BUENOS AIRES.", tagline:"THE HOME OF ARGENTINE FOOTBALL",
+    heroDescription:"Feel the passion of Argentine football — from the stands to the streets of Buenos Aires.",
+    exploreMatches:"Explore matchdays", discoverTours:"Discover experiences", retroTop:"ARGENTINA • FOOTBALL • CULTURE",
+    retroTagline:"THE HOME OF ARGENTINE FOOTBALL", retroBottom:"YOUR MATCHDAY STARTS HERE", scroll:"SCROLL TO EXPLORE",
+    introKicker:"MORE THAN A MATCH", introTitle:"Your gateway to<br><em>Argentine football.</em>",
+    introText:"Discover the atmosphere, traditions and unforgettable stories that make football in Buenos Aires unlike anywhere else.",
+    planExperience:"Plan your experience", offeringsKicker:"MAKE IT A MATCHDAY", offeringsTitle:"Choose your experience",
+    offeringsIntro:"From the first whistle to the final celebration.", ticketsTitle:"Match tickets",
+    ticketsText:"Get in touch about tickets and experience the incredible energy of Argentine football in person.",
+    askTickets:"Ask about tickets", toursTitle:"Football tours",
+    toursText:"Explore football landmarks, local neighborhoods and the stories behind the beautiful game.",
+    askTours:"Explore tours", customTitle:"Personal experiences",
+    customText:"Tell us what you love about football and we’ll help you plan a memorable Buenos Aires visit.",
+    talkToUs:"Talk to us", aboutArtCaption:"BUENOS AIRES · ARGENTINA", aboutKicker:"LOCAL KNOWLEDGE. REAL PASSION.",
+    aboutTitle:"Football is better<br>when you’re <em>part of it.</em>",
+    aboutText:"Buenos Aires Matchday helps football fans connect with the city’s matchday culture. Emanuel can help with ticket enquiries and lead football-focused experiences around Buenos Aires.",
+    meetEmanuel:"Plan with Emanuel", contactKicker:"YOUR ARGENTINE FOOTBALL STORY",
+    contactTitle:"Let’s make it<br><em>matchday.</em>",
+    contactText:"Tell us when you’re visiting and what you’d love to experience. We’ll get back to you personally.",
+    contactLabel:"GET IN TOUCH", whatsappText:"Message Emanuel", emailText:"Send an enquiry",
+    contactNote:"Ticket and tour enquiries are handled personally. No online payment is taken on this website.",
+    footerTagline:"THE HOME OF ARGENTINE FOOTBALL", backTop:"BACK TO TOP ↑"
+  },
+  es: {
+    navHome:"Inicio", navDestinations:"Experiencias", navMatches:"Partidos", navAbout:"Nosotros", navContact:"Contacto",
+    eyebrow:"FÚTBOL. CULTURA. BUENOS AIRES.", tagline:"EL HOGAR DEL FÚTBOL ARGENTINO",
+    heroDescription:"Sentí la pasión del fútbol argentino, desde las tribunas hasta las calles de Buenos Aires.",
+    exploreMatches:"Ver partidos", discoverTours:"Descubrir experiencias", retroTop:"ARGENTINA • FÚTBOL • CULTURA",
+    retroTagline:"EL HOGAR DEL FÚTBOL ARGENTINO", retroBottom:"TU DÍA DE PARTIDO EMPIEZA AQUÍ", scroll:"DESLIZÁ PARA EXPLORAR",
+    introKicker:"MUCHO MÁS QUE UN PARTIDO", introTitle:"Tu puerta de entrada al<br><em>fútbol argentino.</em>",
+    introText:"Descubrí el ambiente, las tradiciones y las historias inolvidables que hacen único al fútbol de Buenos Aires.",
+    planExperience:"Planificá tu experiencia", offeringsKicker:"VIVÍ EL DÍA DE PARTIDO", offeringsTitle:"Elegí tu experiencia",
+    offeringsIntro:"Del primer silbato al festejo final.", ticketsTitle:"Entradas para partidos",
+    ticketsText:"Consultanos por entradas y viví en persona la increíble energía del fútbol argentino.",
+    askTickets:"Consultar entradas", toursTitle:"Tours de fútbol",
+    toursText:"Conocé lugares emblemáticos, barrios y las historias detrás del deporte más lindo del mundo.",
+    askTours:"Ver tours", customTitle:"Experiencias personalizadas",
+    customText:"Contanos qué te apasiona del fútbol y te ayudamos a planificar una visita inolvidable a Buenos Aires.",
+    talkToUs:"Hablemos", aboutArtCaption:"BUENOS AIRES · ARGENTINA", aboutKicker:"CONOCIMIENTO LOCAL. PASIÓN REAL.",
+    aboutTitle:"El fútbol se disfruta más<br>cuando sos <em>parte.</em>",
+    aboutText:"Buenos Aires Matchday conecta a los hinchas con la cultura del día de partido. Emanuel puede ayudarte con consultas sobre entradas y acompañarte en experiencias futboleras por Buenos Aires.",
+    meetEmanuel:"Planificá con Emanuel", contactKicker:"TU HISTORIA DE FÚTBOL ARGENTINO",
+    contactTitle:"Hagamos que sea<br><em>día de partido.</em>",
+    contactText:"Contanos cuándo venís y qué te gustaría vivir. Te responderemos personalmente.",
+    contactLabel:"CONTACTANOS", whatsappText:"Escribile a Emanuel", emailText:"Enviar consulta",
+    contactNote:"Las consultas por entradas y tours se atienden personalmente. Este sitio no procesa pagos en línea.",
+    footerTagline:"EL HOGAR DEL FÚTBOL ARGENTINO", backTop:"VOLVER ARRIBA ↑"
+  }
 };
 
-
-/* LANGUAGE SWITCHER */
-
-let currentLanguage = "en";
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+const languageButtons = document.querySelectorAll(".language-button");
 
 function setLanguage(language) {
-    if (!translations[language]) {
-        return;
-    }
-
-    currentLanguage = language;
-
-    document.documentElement.lang = language;
-    document.title = translations[language].pageTitle;
-
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.dataset.i18n;
-        const translation = translations[language][key];
-
-        if (typeof translation === "string") {
-            element.innerHTML = translation;
-        }
-    });
-
-    document.querySelectorAll(".lang-btn").forEach((button) => {
-        const isActive = button.dataset.lang === language;
-
-        button.classList.toggle("active", isActive);
-        button.setAttribute("aria-pressed", String(isActive));
-    });
-
-    try {
-        localStorage.setItem("bam-language", language);
-    } catch (error) {
-        // The language switcher still works if storage is unavailable.
-    }
-
-    updateContactLinks();
+  const dictionary = translations[language] || translations.en;
+  document.documentElement.lang = language;
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    if (dictionary[key] !== undefined) element.innerHTML = dictionary[key];
+  });
+  languageButtons.forEach((button) => {
+    const active = button.dataset.lang === language;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  try { localStorage.setItem("bam-language", language); } catch (_) {}
 }
 
-document.querySelectorAll(".lang-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-        setLanguage(button.dataset.lang);
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+});
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const open = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    mainNav.classList.toggle("open", open);
+  });
+
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      mainNav.classList.remove("open");
     });
-});
+  });
 
-
-/* MOBILE NAVIGATION */
-
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-
-function closeMenu() {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", currentLanguage === "es"
-        ? "Abrir navegación"
-        : "Open navigation");
-    document.body.classList.remove("menu-open");
-}
-
-function openMenu() {
-    mainNav.classList.add("open");
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", currentLanguage === "es"
-        ? "Cerrar navegación"
-        : "Close navigation");
-    document.body.classList.add("menu-open");
-}
-
-menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-    if (isOpen) {
-        closeMenu();
-    } else {
-        openMenu();
-    }
-});
-
-mainNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
-});
-
-document.addEventListener("keydown", (event) => {
+  document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-        closeMenu();
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      mainNav.classList.remove("open");
     }
-});
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 800) {
-        closeMenu();
-    }
-});
-
-
-/* CONTACT LINKS */
-
-function isConfigured(value) {
-    return value &&
-        !value.includes("XXXXXXXXXX") &&
-        !value.includes("YOUR_EMAIL") &&
-        value.trim().length > 0;
+  });
 }
 
-function makeWhatsAppUrl(message) {
-    if (!isConfigured(CONFIG.whatsappNumber)) {
-        return null;
-    }
+function configureContactLinks() {
+  const whatsappReady = /^\d{8,15}$/.test(CONFIG.whatsappNumber);
+  const emailReady = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONFIG.email);
 
-    return "https://wa.me/" +
-        CONFIG.whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
+  const whatsappHref = whatsappReady
+    ? `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent("Hi Emanuel, I'm interested in Buenos Aires Matchday.")}`
+    : "#contact";
+  const emailHref = emailReady
+    ? `mailto:${CONFIG.email}?subject=${encodeURIComponent("Buenos Aires Matchday enquiry")}`
+    : "#contact";
+
+  ["whatsapp-link", "floating-whatsapp"].forEach((id) => {
+    const link = document.getElementById(id);
+    if (link) {
+      link.href = whatsappHref;
+      if (!whatsappReady) link.addEventListener("click", (event) => {
+        event.preventDefault();
+        alert("Please add Emanuel's WhatsApp number in script.js before publishing the site.");
+      });
+    }
+  });
+
+  const emailLink = document.getElementById("email-link");
+  if (emailLink) {
+    emailLink.href = emailHref;
+    if (!emailReady) emailLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      alert("Please add the contact email in script.js before publishing the site.");
+    });
+  }
 }
 
-function updateContactLinks() {
-    const t = translations[currentLanguage];
-
-    const whatsappLink = document.getElementById("whatsappLink");
-    const floatingWhatsApp = document.getElementById("floatingWhatsApp");
-    const emailLink = document.getElementById("emailLink");
-
-    const defaultWhatsApp = makeWhatsAppUrl(t.whatsappGreeting);
-
-    [whatsappLink, floatingWhatsApp].forEach((link) => {
-        if (defaultWhatsApp) {
-            link.href = defaultWhatsApp;
-            link.removeAttribute("aria-disabled");
-        } else {
-            link.href = "#contact";
-            link.setAttribute("aria-disabled", "true");
-        }
-    });
-
-    if (isConfigured(CONFIG.email)) {
-        emailLink.href =
-            "mailto:" + CONFIG.email +
-            "?subject=" + encodeURIComponent(t.emailSubject) +
-            "&body=" + encodeURIComponent(t.emailBody);
-
-        emailLink.removeAttribute("aria-disabled");
-    } else {
-        emailLink.href = "#contact";
-        emailLink.setAttribute("aria-disabled", "true");
-    }
-
-    document.querySelectorAll("[data-contact]").forEach((link) => {
-        const contactType = link.dataset.contact;
-
-        const messageMap = {
-            tickets: t.whatsappTickets,
-            "tour-city": t.whatsappCityTour,
-            "tour-stadiums": t.whatsappStadiumTour,
-            "tour-matchday": t.whatsappMatchdayTour
-        };
-
-        const message = messageMap[contactType] || t.whatsappGreeting;
-        const url = makeWhatsAppUrl(message);
-
-        if (url) {
-            link.href = url;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-            link.removeAttribute("aria-disabled");
-        } else {
-            link.href = "#contact";
-            link.removeAttribute("target");
-            link.setAttribute("aria-disabled", "true");
-        }
-    });
-}
-
-
-/* CLEAR MESSAGE IF CONTACT DETAILS ARE NOT CONFIGURED */
-
-document.querySelectorAll(
-    "#whatsappLink, #floatingWhatsApp, #emailLink, [data-contact]"
-).forEach((link) => {
-    link.addEventListener("click", (event) => {
-        const isWhatsApp = link.id === "whatsappLink" ||
-            link.id === "floatingWhatsApp" ||
-            link.hasAttribute("data-contact");
-
-        const ready = isWhatsApp
-            ? isConfigured(CONFIG.whatsappNumber)
-            : isConfigured(CONFIG.email);
-
-        if (!ready) {
-            event.preventDefault();
-
-            alert(currentLanguage === "es"
-                ? "Los datos de contacto todavía no están configurados. Por favor, contactá al administrador del sitio."
-                : "Contact details have not been configured yet. Please contact the website administrator.");
-        }
-    });
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelectorAll(".nav-link").forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+  });
 });
 
-
-/* FOOTER YEAR */
-
-document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
-
-
-/* RESTORE LANGUAGE */
+document.getElementById("year").textContent = new Date().getFullYear();
+configureContactLinks();
 
 let savedLanguage = "en";
-
 try {
-    const storedLanguage = localStorage.getItem("bam-language");
-
-    if (storedLanguage && translations[storedLanguage]) {
-        savedLanguage = storedLanguage;
-    }
-} catch (error) {
-    // English remains the default language.
-}
-
+  const storedLanguage = localStorage.getItem("bam-language");
+  if (storedLanguage === "en" || storedLanguage === "es") savedLanguage = storedLanguage;
+} catch (_) {}
 setLanguage(savedLanguage);
