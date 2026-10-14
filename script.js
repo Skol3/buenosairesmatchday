@@ -1,8 +1,8 @@
 // Buenos Aires Matchday — language, mobile navigation and contact links.
 // Replace these two values before publishing. Use country code + number, digits only.
 const CONFIG = {
-  whatsappNumber: "549XXXXXXXXXX",
-  email: "YOUR_EMAIL@example.com"
+  whatsappNumber: "5491136414157",
+  email: "ecrdron97@gmail.com"
 };
 
 const translations = {
@@ -154,3 +154,4 @@ try {
   if (storedLanguage === "en" || storedLanguage === "es") savedLanguage = storedLanguage;
 } catch (_) {}
 setLanguage(savedLanguage);
+
