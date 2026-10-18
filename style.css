@@ -280,3 +280,241 @@ button { font: inherit; }
     padding: 20px;
   }
 }
+
+
+/* ========================================
+   PARTNERS SECTION
+======================================== */
+
+.partners-section {
+    position: relative;
+    padding: 100px 24px;
+    background: #0a1928;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.partners-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* LEFT CONTENT */
+
+.partner-content {
+    max-width: 540px;
+}
+
+.partners-section .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #e8b44f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.partner-content h2 {
+    margin: 0 0 24px;
+
+    color: #ffffff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 800;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.partner-content p {
+    margin: 0 0 18px;
+
+    color: #c2ccd6;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+/* RIGHT PARTNER CARD */
+
+.partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 42px 32px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+
+    text-align: center;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.partner-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(232, 180, 79, 0.5);
+}
+
+/* LOGO */
+
+.partner-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 28px;
+
+    text-decoration: none;
+}
+
+.partner-logo {
+    display: block;
+
+    width: 100%;
+    max-width: 340px;
+    max-height: 220px;
+
+    height: auto;
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.partner-logo-link:hover .partner-logo {
+    transform: scale(1.03);
+}
+
+/* PARTNER NAME */
+
+.partner-card h3 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* PARTNER DESCRIPTION */
+
+.partner-card p {
+    max-width: 380px;
+    margin: 0 0 26px;
+
+    color: #c2ccd6;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* WEBSITE LINK */
+
+.partner-website-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 13px 24px;
+
+    color: #061626;
+    background: #e8b44f;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.partner-website-link:hover {
+    background: #f5ca72;
+    transform: translateY(-2px);
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+    .partners-section {
+        padding: 80px 24px;
+    }
+
+    .partners-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .partner-card {
+        padding: 32px 22px;
+    }
+
+    .partner-logo-link {
+        max-width: 280px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .partners-section {
+        padding: 65px 20px;
+    }
+
+    .partners-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .partner-content {
+        max-width: 100%;
+    }
+
+    .partner-content h2 {
+        font-size: 38px;
+    }
+
+    .partner-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .partner-card {
+        padding: 30px 20px;
+    }
+
+    .partner-logo-link {
+        max-width: 300px;
+        margin-bottom: 24px;
+    }
+
+    .partner-logo {
+        max-height: 190px;
+    }
+
+    .partner-card h3 {
+        font-size: 27px;
+    }
+}
