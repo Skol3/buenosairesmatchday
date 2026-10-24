@@ -27,9 +27,11 @@ button { font: inherit; }
 .nav-link::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--blue); transition: right .25s; }
 .nav-link:hover, .nav-link.active { color: white; }
 .nav-link:hover::after, .nav-link.active::after { right: 0; }
-.language-switch { margin-left: auto; display: flex; align-items: center; gap: 8px; color: #9fb2c1; font-size: 12px; letter-spacing: .1em; }
-.language-button { padding: 7px 2px; border: 0; background: none; color: #a9bac8; cursor: pointer; font-size: 12px; letter-spacing: .1em; }
-.language-button.active { color: white; }
+.language-switch { margin-left: auto; display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+.language-button { display: grid; place-items: center; min-width: 28px; min-height: 32px; padding: 3px; border: 1px solid transparent; border-radius: 4px; background: transparent; color: #a9bac8; cursor: pointer; font-size: 19px; line-height: 1; transition: background .2s, border-color .2s, transform .2s; }
+.language-button:hover { transform: translateY(-1px); }
+.language-button.active { border-color: rgba(88,185,237,.75); background: rgba(88,185,237,.14); }
+.language-button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 .menu-toggle { display: none; }
 .hero { min-height: 760px; height: min(100svh, 980px); position: relative; display: flex; align-items: center; padding: 115px var(--page-pad) 125px; isolation: isolate; background: #0a2237 url("images/hero-bg.jpg") center 48% / cover no-repeat; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, rgba(4,16,28,.35), rgba(4,16,28,.14) 58%, rgba(4,16,28,.25)); }
@@ -158,7 +160,8 @@ button { font: inherit; }
   .main-nav { position: absolute; top: 75px; left: 0; right: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--page-pad) 18px; background: rgba(4,18,31,.97); border-bottom: 1px solid var(--line); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .2s, transform .2s, visibility .2s; }
   .main-nav.open { opacity: 1; visibility: visible; transform: translateY(0); }
   .nav-link { padding: 14px 0; font-size: 11px; }
-  .language-switch { margin-left: 0; gap: 5px; }
+  .language-switch { margin-left: 0; gap: 2px; }
+  .language-button { min-width: 25px; min-height: 31px; padding: 2px; font-size: 17px; }
   .hero { min-height: 820px; height: auto; padding: 128px var(--page-pad) 100px; align-items: flex-start; background-position: 54% center; }
   .hero-content { width: 100%; padding-top: 10px; }
   .eyebrow { max-width: 270px; font-size: 8px; line-height: 1.7; }
@@ -202,8 +205,8 @@ button { font: inherit; }
   .site-footer > small { grid-row: 3; }
 }
 @media (max-width: 390px) {
-  .language-switch { font-size: 10px; }
-  .language-button { font-size: 10px; }
+  .language-switch { gap: 1px; }
+  .language-button { min-width: 23px; font-size: 16px; }
   .hero { min-height: 800px; }
   .hero h1 { font-size: 31px; }
   .retro-card { right: 20px; width: 142px; }
@@ -212,309 +215,4 @@ button { font: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-}
-
-/* Emanuel Cedron photo */
-.about-photo {
-  position: relative;
-  min-height: 440px;
-  overflow: hidden;
-  background: #0b2638;
-  display: flex;
-  align-items: flex-end;
-}
-
-.about-photo .emanuel-photo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 42%;
-  display: block;
-}
-
-.about-photo::after {
-  content: "";
-  position: absolute;
-  inset: 35% 0 0;
-  background: linear-gradient(
-    transparent,
-    rgba(3, 15, 25, 0.82)
-  );
-  pointer-events: none;
-}
-
-.about-photo-caption {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  padding: 26px;
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.contact-option .contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.contact-option .contact-details strong {
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 640px) {
-  .about-photo {
-    min-height: 360px;
-  }
-
-  .about-photo .emanuel-photo {
-    object-position: center 35%;
-  }
-
-  .about-photo-caption {
-    padding: 20px;
-  }
-}
-
-
-/* ========================================
-   PARTNERS SECTION
-======================================== */
-
-.partners-section {
-    position: relative;
-    padding: 100px 24px;
-    background: #0a1928;
-    color: #ffffff;
-    overflow: hidden;
-}
-
-.partners-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 70px;
-}
-
-/* LEFT CONTENT */
-
-.partner-content {
-    max-width: 540px;
-}
-
-.partners-section .section-eyebrow {
-    display: inline-block;
-    margin-bottom: 18px;
-
-    color: #e8b44f;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.partner-content h2 {
-    margin: 0 0 24px;
-
-    color: #ffffff;
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: clamp(36px, 4vw, 56px);
-    font-weight: 800;
-    line-height: 1.05;
-    text-transform: uppercase;
-}
-
-.partner-content p {
-    margin: 0 0 18px;
-
-    color: #c2ccd6;
-    font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.9;
-}
-
-/* RIGHT PARTNER CARD */
-
-.partner-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 42px 32px;
-
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 4px;
-
-    text-align: center;
-
-    transition:
-        border-color 0.3s ease,
-        background 0.3s ease;
-}
-
-.partner-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(232, 180, 79, 0.5);
-}
-
-/* LOGO */
-
-.partner-logo-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    max-width: 340px;
-    margin-bottom: 28px;
-
-    text-decoration: none;
-}
-
-.partner-logo {
-    display: block;
-
-    width: 100%;
-    max-width: 340px;
-    max-height: 220px;
-
-    height: auto;
-    object-fit: contain;
-
-    transition: transform 0.3s ease;
-}
-
-.partner-logo-link:hover .partner-logo {
-    transform: scale(1.03);
-}
-
-/* PARTNER NAME */
-
-.partner-card h3 {
-    margin: 0 0 14px;
-
-    color: #ffffff;
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-/* PARTNER DESCRIPTION */
-
-.partner-card p {
-    max-width: 380px;
-    margin: 0 0 26px;
-
-    color: #c2ccd6;
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-/* WEBSITE LINK */
-
-.partner-website-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    padding: 13px 24px;
-
-    color: #061626;
-    background: #e8b44f;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.partner-website-link:hover {
-    background: #f5ca72;
-    transform: translateY(-2px);
-}
-
-/* TABLETS */
-
-@media (max-width: 900px) {
-    .partners-section {
-        padding: 80px 24px;
-    }
-
-    .partners-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
-    }
-
-    .partner-card {
-        padding: 32px 22px;
-    }
-
-    .partner-logo-link {
-        max-width: 280px;
-    }
-}
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-    .partners-section {
-        padding: 65px 20px;
-    }
-
-    .partners-container {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .partner-content {
-        max-width: 100%;
-    }
-
-    .partner-content h2 {
-        font-size: 38px;
-    }
-
-    .partner-content p {
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .partner-card {
-        padding: 30px 20px;
-    }
-
-    .partner-logo-link {
-        max-width: 300px;
-        margin-bottom: 24px;
-    }
-
-    .partner-logo {
-        max-height: 190px;
-    }
-
-    .partner-card h3 {
-        font-size: 27px;
-    }
 }
