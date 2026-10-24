@@ -29,7 +29,15 @@ const translations = {
     contactText:"Tell us when you’re visiting and what you’d love to experience. We’ll get back to you personally.",
     contactLabel:"GET IN TOUCH", whatsappText:"Message Emanuel", emailText:"Send an enquiry",
     contactNote:"Ticket and tour enquiries are handled personally. No online payment is taken on this website.",
-    footerTagline:"THE HOME OF ARGENTINE FOOTBALL", backTop:"BACK TO TOP ↑"
+    footerTagline:"THE HOME OF ARGENTINE FOOTBALL", backTop:"BACK TO TOP ↑",
+    emanuelKicker: "YOUR LOCAL FOOTBALL CONTACT",
+emanuelTitle: "Meet <em>Emanuel Cedron.</em>",
+emanuelText: "Emanuel Cedron helps visitors discover Argentine football. Contact him about match tickets and football-focused experiences around Buenos Aires, with local knowledge and a personal approach.",
+emanuelButton: "Contact Emanuel",
+partnerKicker: "WORKING TOGETHER",
+partnerTitle: "Our <em>partner.</em>",
+partnerText: "Buenos Aires Matchday is connected with Argentina Sport Stars, a football management agency focused on representing players and creating professional opportunities in football.",
+partnerButton: "Visit Partner Website",
   },
   es: {
     navHome:"Inicio", navDestinations:"Experiencias", navMatches:"Partidos", navAbout:"Nosotros", navContact:"Contacto",
@@ -54,7 +62,15 @@ const translations = {
     contactText:"Contanos cuándo venís y qué te gustaría vivir. Te responderemos personalmente.",
     contactLabel:"CONTACTANOS", whatsappText:"Escribile a Emanuel", emailText:"Enviar consulta",
     contactNote:"Las consultas por entradas y tours se atienden personalmente. Este sitio no procesa pagos en línea.",
-    footerTagline:"EL HOGAR DEL FÚTBOL ARGENTINO", backTop:"VOLVER ARRIBA ↑"
+    footerTagline:"EL HOGAR DEL FÚTBOL ARGENTINO", backTop:"VOLVER ARRIBA ↑",
+    emanuelKicker: "TU CONTACTO LOCAL DE FÚTBOL",
+emanuelTitle: "Conocé a <em>Emanuel Cedron.</em>",
+emanuelText: "Emanuel Cedron ayuda a los visitantes a descubrir el fútbol argentino. Contactalo para consultar sobre entradas y experiencias futboleras en Buenos Aires, con conocimiento local y atención personalizada.",
+emanuelButton: "Contactar a Emanuel",
+partnerKicker: "TRABAJAMOS EN CONJUNTO",
+partnerTitle: "Nuestro <em>socio.</em>",
+partnerText: "Buenos Aires Matchday está vinculado con Argentina Sport Stars, una agencia de representación de futbolistas que busca crear oportunidades profesionales en el fútbol.",
+partnerButton: "Visitar el sitio del socio",
   },
   de: {
     navHome:"Startseite", navDestinations:"Erlebnisse", navMatches:"Spiele", navAbout:"Über uns", navContact:"Kontakt",
@@ -79,7 +95,15 @@ const translations = {
     contactText:"Sag uns, wann du kommst und was du erleben möchtest. Wir melden uns persönlich bei dir.",
     contactLabel:"KONTAKTIERE UNS", whatsappText:"Emanuel schreiben", emailText:"Anfrage senden",
     contactNote:"Anfragen zu Tickets und Touren werden persönlich bearbeitet. Auf dieser Website ist keine Onlinezahlung möglich.",
-    footerTagline:"DAS ZUHAUSE DES ARGENTINISCHEN FUSSBALLS", backTop:"NACH OBEN ↑"
+    footerTagline:"DAS ZUHAUSE DES ARGENTINISCHEN FUSSBALLS", backTop:"NACH OBEN ↑",
+    emanuelKicker: "DEIN LOKALER FUSSBALLKONTAKT",
+emanuelTitle: "Lerne <em>Emanuel Cedron kennen.</em>",
+emanuelText: "Emanuel Cedron hilft Besuchern, den argentinischen Fußball kennenzulernen. Kontaktiere ihn für Ticketanfragen und fußballbezogene Erlebnisse in Buenos Aires – mit lokalem Wissen und persönlicher Betreuung.",
+emanuelButton: "Emanuel kontaktieren",
+partnerKicker: "GEMEINSAM STÄRKER",
+partnerTitle: "Unser <em>Partner.</em>",
+partnerText: "Buenos Aires Matchday ist mit Argentina Sport Stars verbunden, einer Fußballmanagementagentur, die Spieler vertritt und berufliche Chancen im Fußball fördert.",
+partnerButton: "Partnerwebsite besuchen",
   },
   ru: {
     navHome:"Главная", navDestinations:"Впечатления", navMatches:"Матчи", navAbout:"О нас", navContact:"Контакты",
@@ -104,7 +128,15 @@ const translations = {
     contactText:"Расскажи, когда ты приезжаешь и что хотел бы увидеть. Мы ответим лично.",
     contactLabel:"СВЯЗАТЬСЯ", whatsappText:"Написать Эмануэлю", emailText:"Отправить запрос",
     contactNote:"Запросы о билетах и экскурсиях обрабатываются лично. Оплата на этом сайте не принимается.",
-    footerTagline:"ДОМ АРГЕНТИНСКОГО ФУТБОЛА", backTop:"НАВЕРХ ↑"
+    footerTagline:"ДОМ АРГЕНТИНСКОГО ФУТБОЛА", backTop:"НАВЕРХ ↑",
+    emanuelKicker: "ТВОЙ МЕСТНЫЙ КОНТАКТ В МИРЕ ФУТБОЛА",
+emanuelTitle: "Знакомься: <em>Эмануэль Седрон.</em>",
+emanuelText: "Эмануэль Седрон помогает гостям познакомиться с аргентинским футболом. Обращайся к нему по вопросам билетов на матчи и футбольных экскурсий по Буэнос-Айресу. Тебя ждут местные знания и индивидуальный подход.",
+emanuelButton: "Связаться с Эмануэлем",
+partnerKicker: "РАБОТАЕМ ВМЕСТЕ",
+partnerTitle: "Наш <em>партнёр.</em>",
+partnerText: "Buenos Aires Matchday сотрудничает с Argentina Sport Stars — футбольным агентством, которое представляет игроков и помогает им находить профессиональные возможности в футболе.",
+partnerButton: "Перейти на сайт партнёра",
   }
 };
 
